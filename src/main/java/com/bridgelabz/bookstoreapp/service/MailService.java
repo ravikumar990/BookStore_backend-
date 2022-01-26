@@ -27,7 +27,7 @@ public class MailService {
 		final String fromEmail = "bookstoremailapi99@gmail.com";
 	
 		// correct password for gmail id
-		final String password = "Password@123";
+		final String password = "Password@12345";
  
 		Properties props = new Properties();
 		// SMTP Host
@@ -51,12 +51,13 @@ public class MailService {
 		};
 		javax.mail.Session session = Session.getInstance(props, auth);
 		try {
+			//compose message
 			MimeMessage msg = new MimeMessage(session);
 			msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
 			msg.addHeader("format", "flowed");
 			msg.addHeader("Content-Transfer-Encoding", "8bit");
 			msg.setFrom(new InternetAddress("no_reply@gmail.com", "NoReply"));
-			msg.setReplyTo(InternetAddress.parse("bookstoremailapi@gmail.com", false));
+			msg.setReplyTo(InternetAddress.parse("bookstoremailapi99@gmail.com", false));
 			msg.setSubject(subject, "UTF-8");
 			msg.setText(body, "UTF-8");
 			msg.setSentDate(new Date());
