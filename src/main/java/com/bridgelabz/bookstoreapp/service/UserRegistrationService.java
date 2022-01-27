@@ -122,7 +122,7 @@ public class UserRegistrationService implements IUserRegistrationService {
 		Optional<UserRegistrationData> isPresent = userRepo.findByEmailId(emailId);
 		if (isPresent.isPresent()) {
 			email.setTo(forgotPassword.getEmailId());
-			email.setFrom("bookstoremailapi@gmail.com");
+			email.setFrom("bookstoremailapi99@gmail.com");
 			email.setSubject("Reset Password Link");
 			String token = tokenUtil.createToken(isPresent.get().getUserId());
 			email.setBody(mailService.getLink("http://localhost:8080/userregistration/resetpassword/" + token));

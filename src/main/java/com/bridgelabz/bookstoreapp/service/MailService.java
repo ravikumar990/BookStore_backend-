@@ -27,7 +27,7 @@ public class MailService {
 		final String fromEmail = "bookstoremailapi99@gmail.com";
 	
 		// correct password for gmail id
-		final String password = "Password@12345";
+		final String password = "Password@123";
  
 		Properties props = new Properties();
 		// SMTP Host
