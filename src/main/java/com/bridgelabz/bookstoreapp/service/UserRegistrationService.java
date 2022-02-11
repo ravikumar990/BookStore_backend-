@@ -59,7 +59,7 @@ public class UserRegistrationService implements IUserRegistrationService {
 			userData.createUser(userDTO);
 			userRepo.save(userData);
 			email.setTo(userData.getEmailId());
-			email.setFrom("bookstoremailapi99@gmail.com");
+			email.setFrom("ravikumar.telugu990@gmail.com");
 			email.setSubject(" User Verification...");
 			token = tokenUtil.createToken(userData.getUserId());
 			email.setBody(mailService.getLink("http://localhost:8080/userregistration/verify/" + token));
@@ -122,7 +122,7 @@ public class UserRegistrationService implements IUserRegistrationService {
 		Optional<UserRegistrationData> isPresent = userRepo.findByEmailId(emailId);
 		if (isPresent.isPresent()) {
 			email.setTo(forgotPassword.getEmailId());
-			email.setFrom("bookstoremailapi99@gmail.com");
+			email.setFrom("ravikumar.telugu990@gmail.com");
 			email.setSubject("Reset Password Link");
 			String token = tokenUtil.createToken(isPresent.get().getUserId());
 			email.setBody(mailService.getLink("http://localhost:8080/userregistration/resetpassword/" + token));

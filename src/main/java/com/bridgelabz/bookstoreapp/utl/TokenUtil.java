@@ -12,7 +12,7 @@ import com.auth0.jwt.interfaces.Verification;
 
 @Component
 public class TokenUtil {
-	public final String TOKEN_SECRET = "Suraj";
+	public final String TOKEN_SECRET = "Ravi";
 
 	public String createToken(int id) {
 		try {

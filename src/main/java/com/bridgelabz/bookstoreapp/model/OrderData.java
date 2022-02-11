@@ -53,8 +53,6 @@ public class OrderData implements Serializable{
 		this.price = orderDto.getPrice();
 		this.quantity = orderDto.getQuantity();
 		this.address = orderDto.getAddress();
-		//this.userId = orderDto.getUserId();
-		//this.bookId = orderDto.getBookId();
 		this.cancel = false;
 
 	}

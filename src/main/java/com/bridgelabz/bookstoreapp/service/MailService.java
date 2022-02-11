@@ -57,7 +57,7 @@ public class MailService {
 			msg.addHeader("format", "flowed");
 			msg.addHeader("Content-Transfer-Encoding", "8bit");
 			msg.setFrom(new InternetAddress("no_reply@gmail.com", "NoReply"));
-			msg.setReplyTo(InternetAddress.parse("bookstoremailapi99@gmail.com", false));
+			msg.setReplyTo(InternetAddress.parse("ravikumar.telugu990@gmail.com", false));
 			msg.setSubject(subject, "UTF-8");
 			msg.setText(body, "UTF-8");
 			msg.setSentDate(new Date());
